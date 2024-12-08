@@ -1,0 +1,261 @@
+.product-list {
+  padding: 20px;
+  overflow-x: auto; 
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.stock-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stock-switch {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  appearance: none;
+  background-color: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.stock-switch:checked {
+  background-color: #44A889;
+}
+
+.stock-switch::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 19px;
+  height: 19px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.stock-switch:checked::before {
+  left: 26px;
+}
+
+.addProd {
+  padding: 10px 20px;
+  background-color: #44A889;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addProd i {
+  margin-right: 5px;
+}
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
+
+.update-btn, .delete-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #ffc107;
+}
+
+.delete-btn {
+  background-color: #AA4A44;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.out-of-stock {
+  background-color: #AA4A44;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.in-stock {
+  background-color: #44A889;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap; 
+}
+
+.pagination button {
+  padding: 5px 10px;
+  background-color: #808080;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.pagination button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+}
+
+.pagination i {
+  margin: 0 5px;
+}
+
+.previous, .next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stock-switch-wrapper {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 14px;
+    overflow-x: auto; 
+    display: block;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .pagination button {
+    margin: 5px;
+  }
+
+  .product-list {
+    padding: 10px;
+  }
+
+  .addProd {
+    width: 100%;
+    padding: 12px;
+  }
+
+  th, td {
+    font-size: 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stock-switch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .addProd {
+    width: 100%;
+    padding: 12px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .pagination button {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
