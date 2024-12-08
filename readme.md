@@ -58,6 +58,21 @@ npm install
 # Start the Vue.js development server
 npm run serve
 ```
+
+## Launching Backend Tests
+
+To test the backend functionality, follow these steps:
+
+### 1. Navigate to the `backend` directory: 
+
+   ```bash
+   cd backend
+   python manage.py test
+```
+This will execute all the defined unit tests for the backend, including tests for all possible CRUD operations (Create, Read, Update, Delete) and any additional logic implemented for the API endpoints.
+
+Adding Tests
+If you wish to add your own tests, create test cases in a tests.py file located in the Django app directory (e.g., app/tests.py)
 ## API Endpoints
 
 ### Base URL +
