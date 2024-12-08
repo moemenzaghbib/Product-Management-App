@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+
+# Frontend build artifacts
+dist/
+build/
+.next/
+.nuxt/
+
+# IDE files
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
